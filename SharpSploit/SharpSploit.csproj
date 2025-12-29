@@ -51,6 +51,14 @@
       <HintPath>.\References\net35\System.IdentityModel.dll</HintPath>
     </Reference>
   </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net48' ">
+    <Reference Include="System.Management" />
+    <Reference Include="System.Management.Automation" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.IdentityModel" />
+  </ItemGroup>
+
   <ItemGroup Condition=" '$(TargetFramework)' == 'net40' ">
     <Reference Include="mscorlib, version=4.0.0.0">
       <HintPath>.\References\net40\mscorlib.dll</HintPath>
@@ -68,6 +76,7 @@
       <HintPath>.\References\net40\System.IdentityModel.dll</HintPath>
     </Reference>
   </ItemGroup>
+
   <ItemGroup>
     <EmbeddedResource Include="Resources\powerkatz_x86.dll" />
     <EmbeddedResource Include="Resources\powerkatz_x64.dll" />
